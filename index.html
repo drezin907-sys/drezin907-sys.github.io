@@ -43,7 +43,7 @@
     .button-primary { background: var(--blue); color: #fff; }
     .button-primary:hover { background: var(--blue-dark); }
     .button-secondary { border-color: var(--line); background: #fff; color: var(--blue-dark); }
-    .hero-mark { display: grid; width: 156px; height: 156px; place-items: center; border: 1px solid #cde3dc; border-radius: 50%; background: #eaf6f2; color: var(--blue); font-size: 2.8rem; font-weight: 800; letter-spacing: -.06em; }
+    .hero-photo { display: block; position: relative; z-index: 1; width: 156px; height: 156px; border: 1px solid #cde3dc; border-radius: 50%; object-fit: cover; background: #eaf6f2; }
     .summary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 18px 0 34px; }
     .summary-item { padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); }
     .summary-item strong { display: block; color: var(--blue-dark); font-size: .97rem; }
@@ -76,7 +76,7 @@
       .nav-links { gap: 14px; }
       main { margin-top: 18px; padding: 0 14px; }
       .hero { grid-template-columns: 1fr; gap: 24px; padding: 32px 24px; }
-      .hero-mark { width: 90px; height: 90px; font-size: 1.8rem; }
+      .hero-photo { width: 90px; height: 90px; }
       .summary-grid { grid-template-columns: 1fr; }
       .content-grid { grid-template-columns: 1fr; }
       .panel { padding: 23px; }
@@ -115,7 +115,7 @@
           <a class="button button-secondary" href="mailto:andrearaujo.sousaaa@gmail.com">Enviar e-mail</a>
         </div>
       </div>
-      <div class="hero-mark" aria-hidden="true">AG</div>
+      <img class="hero-photo" src="foto-perfil.jpg" alt="Foto de André Gustavo">
     </section>
 
     <section class="summary-grid" aria-label="Resumo profissional">
