@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102a43">
+  <meta name="description" content="Currículo profissional de André Gustavo de Sousa Araújo: experiência administrativa, atendimento e formação em Análise e Desenvolvimento de Sistemas.">
+  <title>André Gustavo | Currículo</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #142b3b;
+      --muted: #5d6d79;
+      --blue: #174b70;
+      --blue-dark: #102a43;
+      --accent: #29a889;
+      --paper: #ffffff;
+      --canvas: #f3f6f8;
+      --line: #dce5ea;
+      --soft: #eaf2f6;
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--canvas); color: var(--ink); line-height: 1.65; }
+    a { color: inherit; }
+    .topbar { background: var(--blue-dark); color: #fff; }
+    .nav { max-width: 1080px; margin: auto; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { font-size: 1.04rem; font-weight: 750; letter-spacing: .01em; }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 22px; }
+    .nav-links a { color: #e6eff4; text-decoration: none; font-size: .92rem; }
+    .nav-links a:hover, .nav-links a:focus-visible { color: #8fe0cb; }
+    main { max-width: 1080px; margin: 34px auto 64px; padding: 0 24px; }
+    .hero { position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 36px; padding: clamp(32px, 7vw, 72px); background: var(--paper); border: 1px solid var(--line); border-radius: 22px; box-shadow: 0 14px 42px #16344a0b; }
+    .hero::after { content: ""; position: absolute; width: 330px; height: 330px; right: -150px; top: -190px; border-radius: 50%; background: #d9eee8; z-index: 0; }
+    .hero-copy, .hero-mark { position: relative; z-index: 1; }
+    .eyebrow { margin: 0 0 12px; color: var(--blue); font-size: .78rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    h1 { margin: 0; max-width: 700px; font-size: clamp(2.35rem, 6vw, 4.1rem); line-height: 1.08; letter-spacing: -.045em; }
+    .hero-summary { max-width: 650px; margin: 20px 0 0; color: var(--muted); font-size: 1.1rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 11px 18px; border: 1px solid transparent; border-radius: 10px; font-weight: 700; text-decoration: none; transition: transform .18s ease, background .18s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { background: var(--blue); color: #fff; }
+    .button-primary:hover { background: var(--blue-dark); }
+    .button-secondary { border-color: var(--line); background: #fff; color: var(--blue-dark); }
+    .hero-mark { display: grid; width: 156px; height: 156px; place-items: center; border: 1px solid #cde3dc; border-radius: 50%; background: #eaf6f2; color: var(--blue); font-size: 2.8rem; font-weight: 800; letter-spacing: -.06em; }
+    .summary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 18px 0 34px; }
+    .summary-item { padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); }
+    .summary-item strong { display: block; color: var(--blue-dark); font-size: .97rem; }
+    .summary-item span { color: var(--muted); font-size: .9rem; }
+    .content-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(260px, .8fr); gap: 18px; align-items: start; }
+    .panel { padding: 28px; border: 1px solid var(--line); border-radius: 16px; background: var(--paper); }
+    .panel + .panel { margin-top: 18px; }
+    .section-title { margin: 0 0 21px; color: var(--blue-dark); font-size: 1.35rem; letter-spacing: -.02em; }
+    .timeline { display: grid; gap: 23px; }
+    .role { position: relative; padding-left: 22px; border-left: 2px solid #cfe2dc; }
+    .role::before { content: ""; position: absolute; left: -6px; top: 6px; width: 10px; height: 10px; border: 2px solid #fff; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+    .role h3 { margin: 0; font-size: 1.04rem; }
+    .role-meta { margin: 3px 0 8px; color: var(--blue); font-size: .9rem; font-weight: 650; }
+    .role p:last-child { margin: 0; color: var(--muted); font-size: .94rem; }
+    .chips { display: flex; flex-wrap: wrap; gap: 9px; margin: 0; padding: 0; list-style: none; }
+    .chips li { padding: 7px 11px; border: 1px solid #d9e7eb; border-radius: 999px; background: #f7fafb; color: #315264; font-size: .88rem; }
+    .education { margin: 0; color: var(--muted); }
+    .education strong { color: var(--ink); }
+    .course-list { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+    .course-list li { padding-left: 17px; border-left: 2px solid #cfe2dc; color: var(--muted); }
+    .course-list strong { color: var(--ink); }
+    .contact { display: grid; gap: 13px; }
+    .contact a { color: var(--blue); font-weight: 650; overflow-wrap: anywhere; }
+    footer { max-width: 1080px; margin: 0 auto; padding: 0 24px 32px; color: var(--muted); text-align: center; font-size: .84rem; }
+    .whatsapp-float { position: fixed; right: 22px; bottom: 22px; z-index: 5; display: inline-flex; align-items: center; gap: 9px; padding: 14px 18px; border-radius: 999px; background: #168b68; color: #fff; box-shadow: 0 8px 24px #123b2c35; font-weight: 750; text-decoration: none; }
+    .whatsapp-float:hover { background: #0f7254; }
+    :focus-visible { outline: 3px solid #55c6a5; outline-offset: 3px; }
+    @media (max-width: 720px) {
+      .nav { align-items: flex-start; flex-direction: column; }
+      .nav-links { gap: 14px; }
+      main { margin-top: 18px; padding: 0 14px; }
+      .hero { grid-template-columns: 1fr; gap: 24px; padding: 32px 24px; }
+      .hero-mark { width: 90px; height: 90px; font-size: 1.8rem; }
+      .summary-grid { grid-template-columns: 1fr; }
+      .content-grid { grid-template-columns: 1fr; }
+      .panel { padding: 23px; }
+      .whatsapp-float { right: 14px; bottom: 14px; padding: 13px 16px; }
+    }
+    @media print {
+      body { background: #fff; }
+      .topbar, .hero-actions, .whatsapp-float { display: none !important; }
+      main { max-width: none; margin: 0; padding: 0; }
+      .hero, .panel, .summary-item { box-shadow: none; break-inside: avoid; }
+      footer { padding-top: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav" aria-label="Navegação principal">
+      <div class="brand">André Gustavo</div>
+      <div class="nav-links">
+        <a href="#experiencia">Experiência</a>
+        <a href="#formacao">Formação</a>
+        <a href="#competencias">Competências</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="nome">
+      <div class="hero-copy">
+        <p class="eyebrow">Currículo profissional · Teresina, PI</p>
+        <h1 id="nome">André Gustavo de Sousa Araújo</h1>
+        <p class="hero-summary">Profissional com experiência em rotinas administrativas, atendimento e organização de processos. Atualmente cursando Análise e Desenvolvimento de Sistemas.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#experiencia">Conheça minha experiência</a>
+          <a class="button button-secondary" href="mailto:andrearaujo.sousaaa@gmail.com">Enviar e-mail</a>
+        </div>
+      </div>
+      <div class="hero-mark" aria-hidden="true">AG</div>
+    </section>
+
+    <section class="summary-grid" aria-label="Resumo profissional">
+      <div class="summary-item"><strong>Área de estudo</strong><span>Análise e Desenvolvimento de Sistemas</span></div>
+      <div class="summary-item"><strong>Experiência</strong><span>Administração, logística e atendimento</span></div>
+      <div class="summary-item"><strong>Idiomas</strong><span>Inglês intermediário</span></div>
+    </section>
+
+    <div class="content-grid">
+      <div>
+        <section class="panel" id="experiencia" aria-labelledby="exp-title">
+          <h2 class="section-title" id="exp-title">Experiência profissional</h2>
+          <div class="timeline">
+            <article class="role">
+              <h3>Auxiliar administrativo</h3>
+              <p class="role-meta">AG Services · atuação em Votorantim Cimentos · jun. 2025 – abr. 2026</p>
+              <p>Atendimento e recepção de motoristas, direcionamento de demandas operacionais, conferência de pagamentos e apoio às rotinas administrativas do setor.</p>
+            </article>
+            <article class="role">
+              <h3>Auxiliar administrativo · Aprendiz</h3>
+              <p class="role-meta">Martins / Slim LOG · jun. 2024 – jul. 2025</p>
+              <p>Apoio à rotina de escritório, organização de viagens, redação de e-mails, gestão de pagamentos e recibos e organização e digitalização de documentos.</p>
+            </article>
+            <article class="role">
+              <h3>Técnico de saúde bucal</h3>
+              <p class="role-meta">Ciros Radiologia · set. 2023 – fev. 2024</p>
+              <p>Atendimento presencial e telefônico, organização de agenda, triagem, registro de informações odontológicas e apoio em exames de radiografia.</p>
+            </article>
+          </div>
+        </section>
+        <section class="panel" id="competencias" aria-labelledby="skills-title">
+          <h2 class="section-title" id="skills-title">Competências</h2>
+          <ul class="chips">
+            <li>Rotinas administrativas</li><li>Atendimento ao cliente</li><li>Organização documental</li>
+            <li>Conferência de pagamentos</li><li>Comunicação interpessoal</li><li>Gestão de agenda</li>
+            <li>Organização de viagens</li><li>Inglês intermediário</li>
+          </ul>
+        </section>
+      </div>
+
+      <aside>
+        <section class="panel" id="formacao" aria-labelledby="edu-title">
+          <h2 class="section-title" id="edu-title">Formação</h2>
+          <p class="education"><strong>Análise e Desenvolvimento de Sistemas</strong><br>Faculdade São Francisco de Assis (UNIFIN)<br>Em andamento</p>
+        </section>
+        <section class="panel" aria-labelledby="courses-title">
+          <h2 class="section-title" id="courses-title">Cursos e certificações</h2>
+          <ul class="course-list">
+            <li><strong>Administração básica</strong><br>SEST SENAT · 130 horas</li>
+            <li><strong>Inglês intermediário</strong><br>SEST SENAT · conclusão em 2023</li>
+            <li><strong>Certificações</strong><br>Gestão de pessoas; Administração de materiais; Comunicação interpessoal e atendimento ao cliente; Ética e relacionamento no trabalho.</li>
+          </ul>
+        </section>
+        <section class="panel" id="contato" aria-labelledby="contact-title">
+          <h2 class="section-title" id="contact-title">Contato</h2>
+          <div class="contact">
+            <a href="mailto:andrearaujo.sousaaa@gmail.com">andrearaujo.sousaaa@gmail.com</a>
+            <a href="https://www.linkedin.com/in/andregustavosa/" target="_blank" rel="noopener noreferrer">Ver perfil no LinkedIn ↗</a>
+            <a href="https://wa.me/5588988484699?text=Ol%C3%A1%2C%20Andr%C3%A9!%20Encontrei%20seu%20curr%C3%ADculo%20online." target="_blank" rel="noopener noreferrer">Conversar pelo WhatsApp</a>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </main>
+  <footer>André Gustavo de Sousa Araújo · Currículo profissional</footer>
+  <a class="whatsapp-float" href="https://wa.me/5588988484699?text=Ol%C3%A1%2C%20Andr%C3%A9!%20Encontrei%20seu%20curr%C3%ADculo%20online." target="_blank" rel="noopener noreferrer" aria-label="Abrir conversa no WhatsApp">WhatsApp <span aria-hidden="true">↗</span></a>
+</body>
+</html>
